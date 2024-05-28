@@ -1,0 +1,332 @@
+/*----------------------------------- big guns -------------------------------------------*/
+body{
+    background-color: gray;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    min-width: 1280px;
+    min-height: 720px; /* Змінено */
+    display: flex; /* Додали flex */
+    flex-direction: column; /* Встановили напрямок колонки */
+}
+
+.PaintYourRide{
+    overflow: hidden;
+}
+
+header{
+    width: 100vw;
+    height: 80px;
+    background-color: green;
+}
+
+nav{
+    background-color: gray;
+    border: 2px;
+    border-style: none solid none none;
+    float: left;
+    width: 200px;
+}
+
+main{
+    justify-content: center;
+    margin: 0 30px 0 30px;
+    width: 95%;
+    flex: 1;
+    background-color: darkgreen;
+}
+footer{
+    width: 100vw;
+    height: 40px;
+    bottom: 0;
+    background-color: green;
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav{
+    background-color: limegreen;
+    flex: 1;
+    margin: 5px 10px 10px 5px;
+    display: block;
+    font-weight: 100;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main{
+    margin: 10px 0 10px 0;
+    display: flex;
+    width: 100vw;
+    flex: 1;
+}
+
+.leftPanel {
+    height: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+.RightPanel {
+    float: right;
+    display: inline-block;
+    height: 100%;
+    margin-right: 20px;
+}
+
+/*----------------------------------- .nav * -------------------------------------------*/
+
+.nav p{
+    width: 60%;
+    padding-left: 10px;
+    text-align: start;
+    font-size: large;
+    line-height: 24px;
+    word-spacing: 4px;
+    margin: 8px;
+    border: 2px;
+    border-style: none dashed none dashed;
+}
+
+.nav h3{
+    width: 80%;
+    text-align: start;
+    font-weight: bold;
+    margin: 6px;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover{
+    color: red;
+}
+
+/*----------------------------------- .main * -------------------------------------------*/
+
+.section{
+    margin: 10px 0 10px 0;
+    width: 100%;
+}
+
+.element{
+    width: 99%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+}
+
+.element button{
+    background-color: blue;
+    width: 100%;
+    border: 0;
+    cursor: pointer;
+}
+
+.element button:hover{
+    background-color: cornflowerblue;
+    width: 100%;
+    border: 0;
+    cursor: pointer;
+}
+
+.image{
+    width: 100%;
+}
+
+.image img{
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    width: 99%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+/*----------------------------------- .bg * -------------------------------------------*/
+.bg{
+
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.bg img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: 1;
+}
+.bg h1, h2{
+    z-index: 2;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/*--------------------------- Painting arear-------------------------------------------------*/
+#paintArea {
+    background-color: white;
+    width: 100vw;
+    height: 89vh;
+    float: left;
+    position: relative;
+    overflow: auto;
+}
+
+#paintArea canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: none;
+}
+
+
+/*------------ dropdowns ------------------------------------------------------*/
+
+.dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    font-size: 16px;
+    border: none;
+    height: 100%;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+}
+
+.dropdown-content {
+    padding-top: 2px;
+    display: none;
+    position: absolute;
+    background-color: #3e8e41;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.contentbtn {
+    color: black;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 80px;
+    border-radius: 0;
+    margin: 2px 0 2px 0;
+    cursor: pointer;
+}
+
+.contentbtn:hover{
+    background-color: lightgray;
+}
+
+.contentbtn img{
+    width: 50px;
+    height: 50px;
+    object-fit: fill;
+}
+
+.dropdownV {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.dropdownV-content {
+    padding: 2px;
+    display: none;
+    position: absolute;
+    background-color: gray;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0;
+}
+
+
+.dropdownV-content button {
+    color: black;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    margin: 2px 0 2px 0;
+}
+
+.dropdownV:hover .dropdownV-content {
+    top: 2px;
+    right: 100%;
+    margin-right: 2px;
+    display: block;
+}
+
+.dropdownV button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+
+.exit button{
+    margin: 5px;
+    height: 64px;
+    width: 64px;
+    background-color: white;
+    border: 0;
+    border-radius: 30%;
+    display: inline-block;
+}
+
+.exit button:hover {
+    background-color: gray;
+}
+
+.exit img{
+    object-fit: cover;
+}
+
+#colorPicker{
+    height: 30px;
+}
+
+#Sizer{
+    -webkit-appearance: none;
+}
+
+#Sizer::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #04AA6D;
+    cursor: pointer;
+}
+
+.Error{
+    flex: 1;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

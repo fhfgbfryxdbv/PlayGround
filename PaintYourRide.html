@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paint, Scroll and Fill on Canvas</title>
+  <link rel="stylesheet" href="CSS(2).css">
+  <link rel="preload" href="script.js">
+  <link rel="shortcut icon" href="logo.jpg">
+</head>
+<body>
+  <header>
+    <div class="leftPanel">
+      <a href="index.html" class="exit"><button><img src="exit.png" alt=""></button></a>
+    </div>
+
+    <div class="RightPanel">
+      <input type="range" id="Sizer" class="range" title="розміри пензля" min="1" max="100">
+      <input type="color" id="colorPicker" title="Колір пензля">
+      <div class="dropdown">
+        <button onclick="" class="dropbtn">Settings</button>
+        <div class="dropdown-content">
+          <button onclick="saveCanvas()" id="Sbtn" class="contentbtn">save as PNG</button>
+          <button onclick="clear()" id="Cbtn" class="contentbtn">clear</button>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn">Toolbar</button>
+        <div class="dropdown-content">
+          <button onclick="selectPencil()" class="contentbtn"><img src="Pensil.png" alt="Pensil"></button>
+          <button onclick="selectSquare()" class="contentbtn"><img src="Square.png" alt="Square"></button>
+          <div class="dropdownV">
+            <button class="contentbtn"><img src="Circle.png" alt="Circle"></button>
+            <div class="dropdownV-content">
+              <button onclick="selectCircle()">коло</button>
+              <button onclick="selectElipse()">еліпс</button>
+            </div>
+          </div>
+          <button onclick="selectEraser()" class="contentbtn"><img src="Eraser.png" alt="Eraser"></button>
+        </div>
+      </div>
+    </div>
+  </header>
+    <div id="paintArea">
+			<canvas id="paintCanvas" width="1920" height="1080"></canvas>
+			<canvas id="hintCanvas" width="1920" height="1080"></canvas>
+		</div>
+</body>
+<script src="script.js"></script>
+</html>
